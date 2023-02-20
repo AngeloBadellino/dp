@@ -1,11 +1,11 @@
 # Builder 
-
 Creational pattern
-# Advantages
 
+# Advantages
 * Particulary useful to create object that have a complex initialization.
 * Can be used to create object of the same type.
 * Gave control over object creation: dynamic initialization, instance reuse ...
+
 # Notes
 * Useful to create Composite trees.
 * Can be a Singleton.

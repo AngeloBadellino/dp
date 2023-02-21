@@ -11,14 +11,15 @@ interface Builder {
     void AddTipProtector();
     void AddEdges();
     void AddBindings();
-    void AddBreks();
+    void AddBreaks();
 }
+
 class SkiBuilder : Builder {
     private Ski _finalProduct = new Ski();
     public void AddTipProtector() => this._finalProduct.Add("Tip Protector");
     public void AddEdges() => this._finalProduct.Add("Edges");
     public void AddBindings() => this._finalProduct.Add("Bindings");
-    public void AddBreks() => this._finalProduct.Add("Breaks");
+    public void AddBreaks() => this._finalProduct.Add("Breaks");
     public Ski GetInstance(){
         Ski instance = this._finalProduct;
         Reset();

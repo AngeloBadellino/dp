@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 
 class Ski {
-
     List<string> components = new List<string>();
-
     public void Add(string component) => components.Add(component);
 }
 

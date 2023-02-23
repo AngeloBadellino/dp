@@ -1,6 +1,3 @@
-# Builder 
-Creational pattern
-
 # Advantages
 * Particulary useful to create object that have a complex initialization.
 * Can be used to create object of the same type.

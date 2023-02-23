@@ -9,4 +9,4 @@
 * It's a specialization of Template Method and can serve as a step of it.
 
 # Class diagram
-<img src="./classdiagram.svg">
+<img src="./classdiagram.svg" width="400" height="350">

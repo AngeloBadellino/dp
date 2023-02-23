@@ -8,3 +8,5 @@
 * Can be seen as a Facade that hide the details on the way the system creates objects.
 * It can be a Singleton.
 
+# Class diagram
+<img src="./classdiagram.svg">

@@ -1,0 +1,29 @@
+classDiagram
+ProductCreator..|>SmartphoneCreator
+ProductCreator..|>TabletCreator
+Product--|>Smartphone
+Product--|>Tablet
+ProductCreator..>Product
+class Product{
+    <<interface>>
++Id
+DoSomething()
+}
+class Smartphone{
++Id
+DoSomething()
+}
+class Tablet{
++Id
+DoSomething()
+}
+class ProductCreator{
+    <<abstract>>
+Create()
+}
+class SmartphoneCreator{
+Create()
+}
+class TabletCreator{
+Create()
+}

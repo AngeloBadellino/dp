@@ -9,4 +9,4 @@
 * It can be a Singleton.
 
 # Class diagram
-<img src="./Abstract/classdiagram.svg" width="400" height="350">
+<img src="./classdiagram.svg" width="400" height="350">

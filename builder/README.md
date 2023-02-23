@@ -1,4 +1,5 @@
 # Advantages
+
 * Particulary useful to create object that have a complex initialization.
 * Can be used to create object of the same type.
 * Gave control over object creation: dynamic initialization, instance reuse ...
@@ -9,6 +10,7 @@
 * You can use it with Bridge acting as the implementation
 
 # Class Diagram
+
 ```mermaid
 classDiagram
 IComponentAbstractFactory..|>BluComponentAbstractFactory
@@ -55,3 +57,8 @@ class ILabel{
 DoSomething()
 }
 ```
+
+# Class diagram
+
+![Alt text](./classdiagram.svg)
+<img src="./classdiagram.svg">

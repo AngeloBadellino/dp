@@ -1,22 +1,24 @@
-interface IButton {}
-interface ILabel {}
+namespace patterns.AbstactFactory {
+  interface IButton {}
+  interface ILabel {}
 
-class BlueButton implements IButton { }
-class GreenButton implements IButton { }
+  class BlueButton implements IButton {}
+  class GreenButton implements IButton {}
 
-class BlueLabel implements ILabel { }
-class GreenILabel implements ILabel { }
+  class BlueLabel implements ILabel {}
+  class GreenILabel implements ILabel {}
 
-interface IComponentAbstractFacroty {
-    GetButton() : IButton;
-    GetLabel() : IButton;
-}
+  interface IComponentAbstractFacroty {
+    GetButton(): IButton;
+    GetLabel(): IButton;
+  }
 
-class BluComponentAbstractFactory implements IComponentAbstractFacroty{
+  class BluComponentAbstractFactory implements IComponentAbstractFacroty {
     GetButton(): IButton {
-        return new BlueButton();
+      return new BlueButton();
     }
     GetLabel(): IButton {
-        return new GreenButton();
+      return new GreenButton();
     }
+  }
 }

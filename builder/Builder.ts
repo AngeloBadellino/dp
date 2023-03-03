@@ -1,55 +1,56 @@
-interface Builder {
-    AddTipProtector() : Builder;
-    AddEdges() : Builder;
-    AddBindings() : Builder;
-    AddBreaks() : Builder;
-}
+namespace patterns.Builder {
+  interface Builder {
+    AddTipProtector(): Builder;
+    AddEdges(): Builder;
+    AddBindings(): Builder;
+    AddBreaks(): Builder;
+  }
 
-class Ski {
+  class Ski {
     public parts: string[] = [];
 
     public listParts(): void {
-        console.log(`Product parts: ${this.parts.join(', ')}\n`);
+      console.log(`Product parts: ${this.parts.join(", ")}\n`);
     }
-}
+  }
 
-class SkiBuilder implements Builder {
-    private _finalProduct : Ski;
+  class SkiBuilder implements Builder {
+    private _finalProduct: Ski;
 
     constructor() {
-        this.reset();
+      this.reset();
     }
 
     AddTipProtector(): SkiBuilder {
-        this._finalProduct.parts.push("Tip Protector");
-        return this;
+      this._finalProduct.parts.push("Tip Protector");
+      return this;
     }
     AddEdges(): SkiBuilder {
-        this._finalProduct.parts.push("Edges")
-        return this;
+      this._finalProduct.parts.push("Edges");
+      return this;
     }
     AddBindings(): SkiBuilder {
-        this._finalProduct.parts.push("Bindings")
-        return this;
+      this._finalProduct.parts.push("Bindings");
+      return this;
     }
     AddBreaks(): SkiBuilder {
-        this._finalProduct.parts.push("Breaks")
-        return this;
+      this._finalProduct.parts.push("Breaks");
+      return this;
     }
 
-    public GetInstance() : Ski {
-        let result = this._finalProduct;
-        this.reset();
-        return result;
-    } 
-
-    private reset() : void {
-        this._finalProduct = new Ski();
+    public GetInstance(): Ski {
+      let result = this._finalProduct;
+      this.reset();
+      return result;
     }
 
-}
+    private reset(): void {
+      this._finalProduct = new Ski();
+    }
+  }
 
-function Client() : void {
+  function Client(): void {
     let skiBuilder = new SkiBuilder();
-    let concreteSki : Ski = skiBuilder.AddBindings().AddBreaks().GetInstance();
+    let concreteSki: Ski = skiBuilder.AddBindings().AddBreaks().GetInstance();
+  }
 }
